@@ -13,7 +13,7 @@ type grpcServer struct {
 	api.UnimplementedLogServer
 	*Config
 }
-func newgrpcServer(config *Config) (srv *grpcServer, err, error) {
+func newgrpcServer(config *Config) (srv *grpcServer, err error) {
 	srv = &grpcServer{
 		Config: config,
 	}
