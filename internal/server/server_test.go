@@ -26,6 +26,7 @@ func TestServer(t *testing.T) {
 		"produce/consume a message to/from the log succeeeds": testProduceConsume,
 		"produce/consume stream succeeds":                     testProduceConsumeStream,
 		"consume past log boundary fails":                     testConsumePastBoundary,
+		"unauthorized fails":                                  testUnauthorized,
 	} {
 		t.Run(scenario, func(t *testing.T) {
 			rootClient,
